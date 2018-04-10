@@ -78,7 +78,7 @@
                         <td colspan="6" rowspan="4">我保证xxx</td>
                     </tr>
                     <tr>
-                        <td colspan="6">是否附安全工作方案： 是   否   </td>
+                        <td colspan="6">是否附安全工作方案： 是   否    </td>
                         <td colspan="2">其他附件（危害识别等）：</td>
                     </tr>
                     <tr>
