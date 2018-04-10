@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <configSections>
+    <section name="FineUIPro" type="FineUIPro.ConfigSection, FineUIPro" requirePermission="false" />
+  </configSections>
+  <!-- 可用的配置项（这里列的都是默认值）: 
+      Theme="Default" 
+      Language="zh_CN" 
+      DebugMode="false"
+      FormMessageTarget="Qtip" 
+      FormOffsetRight="0" 
+      FormLabelWidth="100" 
+      FormLabelSeparator="：" 
+      FormLabelAlign="Left" 
+      FormRedStarPosition="AfterText" 
+      EnableAjax="true" 
+      EnableAjaxLoading="true" 
+      AjaxTimeout="120" 
+      AjaxLoadingType="Default" 
+      AjaxLoadingText="" 
+      ShowAjaxLoadingMaskText=false
+      AjaxLoadingMaskText="" 
+      CustomTheme="" 
+      CustomThemeBasePath="~/res/themes" 
+      IconBasePath="~/res/icon" 
+      JSBasePath="~/res/js"
+      IEEdge="true"
+      EnableShim="false"
+      EnableCompactMode="false"
+  -->
+  <FineUIPro DebugMode="true" Theme="Cupertino" />
+  <appSettings />
+  <connectionStrings />
+  <system.web>
+    <!-- Net4.0以上的项目，一定要为pages节点加上这两个属性：controlRenderingCompatibilityVersion="4.0" clientIDMode="AutoID" -->
+    <pages controlRenderingCompatibilityVersion="4.0" clientIDMode="AutoID">
+      <controls>
+        <add assembly="FineUIPro" namespace="FineUIPro" tagPrefix="f" />
+      </controls>
+    </pages>
+    
+    <!-- 请求正文的最大值： 512000K = 500M  -->
+    <httpRuntime maxRequestLength="512000" />
+    <customErrors mode="Off" />
+    <compilation debug="true" />
+    
+    <!-- 
+      在虚拟主机中运行ASP.NET程序，要添加如下配置项，否则在页面回发时可能出现“验证视图状态 MAC 失败”的错误。
+      如何生成MachineKey：http://blogs.msdn.com/b/amb/archive/2012/07/31/easiest-way-to-generate-machinekey.aspx
+    
+    <machineKey decryptionKey="7E2D92E82700F80C72AA0F6FBE42CCDB76A9A29805355115,IsolateApps" validationKey="40C295F1C6E7332867DD50EBAD174E3A5EF52212070B15519FAB47C00B9EEFA18F24643EFB59FC10946F75CE2EF2DB2D6437BA23CF55A1E358FA32FB25DFFE74,IsolateApps" />
+    -->
+	
+    
+    <!--
+    <authentication mode="Forms">
+      <forms name=".ASPXFORMSAUTH" loginUrl="~/default.aspx" timeout="120" defaultUrl="~/main.aspx" protection="All" path="/"/>
+    </authentication>
+    <authorization>
+      <deny users="?"/>
+    </authorization>
+    -->
+
+  </system.web>
+  <!--
+  <location path="res.axd">
+    <system.web>
+      <authorization>
+        <allow users ="*" />
+      </authorization>
+    </system.web>
+  </location>
+  -->
+  
+  <system.webServer>
+    <modules>
+      <add name="FineUIProScriptModule" type="FineUIPro.ScriptModule, FineUIPro"/>
+    </modules>
+    <handlers>
+      <add name="FineUIProResourceHandler" verb="GET" path="res.axd" type="FineUIPro.ResourceHandler, FineUIPro"/>
+    </handlers>
+  </system.webServer>
+  
+</configuration>
