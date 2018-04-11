@@ -16,7 +16,8 @@ namespace FineUIPro.EmptyProjectNet40
 
                 //PageContext.RegisterStartupScript(Window2.GetShowReference(300, 300));
 
-             
+                Alert.Show("", MessageBoxIcon.Success);
+               
 
             }
 
