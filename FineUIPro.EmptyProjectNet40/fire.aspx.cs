@@ -22,7 +22,7 @@ namespace FineUIPro.EmptyProjectNet40
 
 
             }
-
+             
         }
 
         protected void btnSavePost_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace FineUIPro.EmptyProjectNet40
             TextBox tbxUserName = dd.FindControl("zuoyedanwei") as TextBox;
             TextBox password = dd.FindControl("shudidanwei") as TextBox;
             TextBox quyu = dd.FindControl("shudidanwei") as TextBox;
-            CheckBoxList list = dd.FindControl("CheckBoxList1") as CheckBoxList;
+            CheckBoxList list = dd.FindControl("CheckBoxList1") as CheckBoxList; 
             string bb = string.Join(",", list.SelectedValueArray);
             Alert.Show(bb,MessageBoxIcon.Warning);
             //string bbn = "value1,value2,value3,value4,value6";

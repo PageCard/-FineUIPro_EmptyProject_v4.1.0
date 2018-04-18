@@ -18,11 +18,11 @@
                         <table>
                             <tr>
                                 <td>
-                                    <f:Button runat="server" CssClass="icononlyaction" ID="btnHomePage" ToolTip="官网示例" IconAlign="Top" IconFont="_Home"
+                                    <f:Button runat="server" CssClass="icononlyaction" ID="btnHomePage" ToolTip="官网示例" IconAlign="Top" IconFont="_Apple"
                                         EnablePostBack="false" EnableDefaultState="false" EnableDefaultCorner="false"
                                         OnClientClick="window.open('http://fineui.com/pro/','_blank');">
                                     </f:Button>
-                                    <a class="logo" href="./index.aspx" title="FineUI首页">FineUIPro 空项目
+                                    <a class="logo" href="./index.aspx" title="FineUI首页">智慧求职与招聘应用系统
                                     </a>
                                 </td>
                                 <td style="text-align: right;">
@@ -32,7 +32,7 @@
                                             <f:Listener Event="click" Handler="onThemeSelectClick" />
                                         </Listeners>
                                     </f:Button>
-                                    <f:Button runat="server" CssClass="userpicaction" Text="三生石上" IconUrl="~/res/images/my_face_80.jpg" IconAlign="Left"
+                                    <f:Button runat="server" CssClass="userpicaction" Text="管理员" IconUrl="~/res/images/my_face_80.jpg" IconAlign="Left"
                                         EnablePostBack="false" EnableDefaultState="false" EnableDefaultCorner="false">
                                         <Menu runat="server">
                                             <f:MenuButton Text="个人信息" IconFont="_User" EnablePostBack="false" runat="server">
@@ -60,10 +60,10 @@
                         <f:Tree runat="server" ShowBorder="false" ShowHeader="false" ID="treeMenu" EnableSingleClickExpand="true"
                             HeaderStyle="true" HideHScrollbar="true" HideVScrollbar="true" ExpanderToRight="true">
                             <Nodes>
-                                <f:TreeNode Text="默认分类" Expanded="true">
-                                    <f:TreeNode Text="开始页面" NavigateUrl="~/hello.aspx"></f:TreeNode>
-                                    <f:TreeNode Text="登录页面" NavigateUrl="~/login.aspx"></f:TreeNode>
-                                    <f:TreeNode Text="动力厂" NavigateUrl="/fire.aspx"></f:TreeNode>
+                                <f:TreeNode Text="站点控制" Expanded="true">
+                                    <f:TreeNode Text="域名控制" Icon="ApplicationError" NavigateUrl="~/hello.aspx"></f:TreeNode>
+                                    <f:TreeNode Text="ip控制" Icon="ApplicationGet" NavigateUrl="~/login.aspx"></f:TreeNode>
+                                    <f:TreeNode Text="系统设置" Icon="ApplicationOsxGo" NavigateUrl="/fire.aspx"></f:TreeNode>
                                 </f:TreeNode>
                             </Nodes>
                         </f:Tree>
